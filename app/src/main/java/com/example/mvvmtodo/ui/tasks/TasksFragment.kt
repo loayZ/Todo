@@ -1,7 +1,11 @@
 package com.example.mvvmtodo.ui.tasks
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.SearchEvent
 import android.view.View
+import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,4 +38,12 @@ private val viewModel : TasksViewModel by viewModels()
         }
     }
 
+
+    //for search
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_fragment_tasks,menu)
+
+        val searchItem = menu.findItem(R.id.search_action)
+        val SearchView = searchItem.actionView as SearchView
+    }
 }

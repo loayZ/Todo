@@ -7,6 +7,8 @@ import kotlinx.android.parcel.Parcelize
 import java.text.DateFormat
 @Entity(tableName = "task_table")
 @Parcelize
+
+//data class can be used for comparition
 data class Task(
     val name: String,
     val important: Boolean = false,
