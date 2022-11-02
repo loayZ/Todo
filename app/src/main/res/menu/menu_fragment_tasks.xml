@@ -11,7 +11,6 @@
         app:showAsAction="always|collapseActionView"/>
 
     <item
-        android:id="sort_action"
         android:icon="@drawable/ic_sort_24"
         android:title="Sort"
         app:showAsAction="always">
@@ -28,10 +27,12 @@
         </menu>
 
     </item>
+
 <item
-    android:id="hide_completed_tasks_action"
+    android:id="@+id/hide_completed_tasks_action"
     android:title="Hide completed"
     app:showAsAction="never"/>
+
     <item
         android:id="@+id/delete_all_completed_tasks_action"
          android:title="Delete all completed"
